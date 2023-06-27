@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>TicketUs-Monuments</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logoNew.png') }}" type="image/x-icon" />
+    
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/logoNew.png') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/versions.css') }}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="{{ url_for('static', filename='js/modernizer.js') }}"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- fevicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logoNew.png') }}" type="image/x-icon" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+
+</head>
+<body class="realestate_version">
+	<style>
+		figure{
+			max-height: 225px;
+			overflow: hidden;
+		}
+	</style>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <header>
+		<!-- header inner -->
+		<div class="header pt-0 mb-0" >
+	
+		  <div class="container pt-0">
+			<div class="row">
+			  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+				<div class="full">
+				  <div class="center-desk">
+					<a href="/">
+					  <div class="d-flex align-item-center">
+						<img width="75" src="{{ url_for('static', filename='images/logoNew.png') }}" alt="#">
+					  </a>
+					  </div>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+				<div class="location_icon_bottum_tt">
+				  <ul>
+					<!-- <li><img src="icon/loc1.png" />Location</li> -->
+					<li><img src="{{ url_for('static', filename='icon/email1.png') }}" />ticket.us@gmail.com</li>
+					<li><img src="{{ url_for('static', filename='icon/call1.png') }}" />(+91)XXXXXXXXXX</li>
+					{% if session['user'] %}
+					<span class="h6 text-white-50">Welcome</span> <span
+					  class="text-white h4 mr-3">{{session['user'].split()[0]}}</span>
+					<a href="/logout">
+					  <button type="button" class="btn btn-success">Logout</button>
+					</a>
+					{% else %}
+					<a href="#register" class="ml-5 pl-5">
+					  <button type="button" class="btn btn-success">Register</button>
+					</a>
+					<a href="/login">
+					  <button type="button" class="btn btn-success">Login</button>
+					</a>
+					{% endif %}
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-12 location_icon_bottum">
+				<div class="row">
+				  <div class="col-md-8 ">
+					<div class="menu-area">
+					  <div class="limit-box">
+						<nav class="main-menu">
+						  <ul class="menu-area-main">
+							<li class="active"> <a href="index.html">Home</a> </li>
+							<li> <a href="">About</a> </li>
+							<li><a href="#placesToExplore">Places To Explore</a></li>
+							<li><a href="#testimonial">Testimonial</a></li>
+							<li><a href="#contact">Contact Us</a></li>
+	
+						  </ul>
+						</nav>
+					  </div>
+					</div>
+	
+				  </div>
+				  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+					<form class="search">
+					  <input class="form-control mb-1" type="text" placeholder="Search">
+					  <button><img src="{{ url_for('static', filename='images/search_icon.png') }}"></button>
+					</form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- end header inner -->
+	  </header>
+	
+	
+	
+	<div id="features" class="section wb">
+	<div class="container">
+		<div class="section-title row text-center justify-content-center d-flex">
+			<div class="col-md-8 col-md-offset-2 ">
+				<small>Save Forest And Save Humanity</small>
+				<h3>WildLife</h3>
+				<p class="lead">Select the Wildlife and Get a QR-Coded Ticket that can help you and Nature to suffer.</p>
+			</div><!-- end col -->
+		</div><!-- end title -->
+		
+		<hr class="invis"> 
+
+		<div class="row">
+			{% for item in data %}
+			<div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename=item['img_url']) }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename=item['img_url']) }}" alt="" class="img-responsive">
+							</figure>
+							<!-- Tajmahal -->
+							<div class="item-body">
+								<h3>{{item["name"]}}</h3>
+								<div class="info">
+									<p><span>{{item["desc"]}}</span> </p>
+									<h6>Starting From</h6>
+									<p>{{item["price"]}} >
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									{{item["location"]}}
+								</div>
+								<div class="row d-flex justify-content-end">
+									<a href="/form?location={{item['name']}}" class="btn btn-outline-success">Book now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+			{% endfor %}
+
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="{{ url_for('static', filename='images/logoNew.png') }}" alt="">
+                        </div>
+                        <p> “TicketUs” An e-ticket is a paperless electronic document used for ticketing. </p>
+                        <p>It can help in better crowd management of museums/heritage/Wild Life Sanctuary sites all over India.</p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                
+				
+				<div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">TicketUs.com</a></li>
+                            <li><a href="#">ggct.in</a></li>
+                            <li>Gyan Ganga College Of Technology</li>
+                            <li>+91 XXXXXXXXXX</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i>
+    <!-- ALL JS FILES -->
+    <script src="{{ url_for('static', filename='js/all.js') }}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hoverdir.js') }}"></script>    
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+   <!-- MAP & CONTACT -->
+    <!-- <script src="{{ url_for('static', filename='js/map.js') }}"></script> -->
+
+</body>
+
+</html>

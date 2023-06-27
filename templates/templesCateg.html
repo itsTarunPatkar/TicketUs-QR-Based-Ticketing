@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>TicketUs-Monuments</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logoNew.png') }}" type="image/x-icon" />
+    
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/logoNew.png') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/versions.css') }}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="{{ url_for('static', filename='js/modernizer.js') }}"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="realestate_version">
+	<style>
+		figure{
+			max-height: 225px;
+			overflow: hidden;
+		}
+	</style>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='images/logoNew.png') }}" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#About">About us </a></li>
+                        <!-- <li><a href="service.html">Service</a></li> -->
+                        <!-- <li><a href="gallery.html">Gallery</a></li> -->
+                        <!-- <li><a class="active" href="properties.html">Properties</a></li> -->
+                        <li><a href="/contact">Contact</a></li>
+                        <li class="social-links"><a href="#"><i class="fa fa-twitter global-radius"></i></a></li>
+                        <li class="social-links"><a href="#"><i class="fa fa-facebook global-radius"></i></a></li>
+                        <li class="social-links"><a href="#"><i class="fa fa-linkedin global-radius"></i></a></li>
+						<li class="search-option">
+							<button class="search tran3s dropdown-toggle" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i></button>
+							<form action="#" class="p-color-bg dropdown-menu tran3s" aria-labelledby="searchDropdown">
+								<input type="text" placeholder="Search....">
+								<button class="p-color-bg"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+					   </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="all-title-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Monuments</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="features" class="section wb">
+	<div class="container">
+		<div class="section-title row text-center">
+			<div class="col-md-8 col-md-offset-2">
+				<small>Some Soul-full Places In India.</small>
+				<h3>Temples</h3>
+				<p class="lead">Select the Templ and Get a QR-Coded Ticket that can help you and Nature to suffer.</p>
+			</div><!-- end col -->
+		</div><!-- end title -->
+		
+		<hr class="invis"> 
+
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/tajmahal (1).jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/tajmahal (1).jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<!-- Tajmahal -->
+							<div class="item-body">
+								<h3>Tajmahal</h3>
+								<div class="info">
+									<p><span>The Taj Mahal is a designated UNESCO World Heritage monument and the absolute pinnacle of Mughal architecture. 
+										The Taj Mahal is a designated UNESCO World Heritage monument and the absolute pinnacle of Mughal architecture. 
+										
+										
+									
+									</span> </p>
+									<h6>Starting From</h6>
+									<p>45  Rs. (Indian Adult)</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+			<!-- Qutub Minar  -->
+            <div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/rajeev-pal-I3gZE5pfVoY-unsplash.jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/rajeev-pal-I3gZE5pfVoY-unsplash.jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<div class="item-body">
+								<h3>Qutub Minar</h3>
+								<div class="info">
+									<p><span>As you enter, the glorified plaques greet you giving you the slice of history and what Qutub Minar stands for. But Qutub Minar is many things for many people. 
+										In the present day....</span> </p>
+									<h6>Starting From</h6>
+									<p>35  Rs. (Indian Adult)</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									Seth Sarai, Mehrauli, New Delhi, Delhi 110030
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+			<!-- Khajuraho -->
+            <div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/praniket-desai-5yaZgm9bIh8-unsplash.jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/praniket-desai-5yaZgm9bIh8-unsplash.jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<div class="item-body">
+								<h3>Khajuraho</h3>
+								<div class="info">
+									<p><span>Khajuraho, the ancient Kharjjura-vahaka represent today a distinct
+										pattern of art and temple architecture of its own, reminding one of the
+										rich and creative period it witnessed during ..... </p>
+									<h6>Starting From</h6>
+									<p>35  Rs. (Indian Adult)</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									Address
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+		</div>
+		<div class="row">
+			<!-- Gwalior Fort -->
+            <div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/yash-kiran-Ii4-mpa_g3Y-unsplash.jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/yash-kiran-Ii4-mpa_g3Y-unsplash.jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<div class="item-body">
+								<h3>Gwalior Fort</h3>
+								<div class="info">
+									<p><span>Legend states that the Gwalior Fort was built by a local king in honour of the saint who cured ......</p>
+									<h6>Starting From</h6>
+									<p>20  Rs. (Indian Adult)</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									VW2C+QJQ, Khajuraho Airport Area, Khajuraho, Madhya Pradesh 471606
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+				<!-- Sanchi Stupa -->
+			</div>
+            <div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/deepanshu-arora-jXzX1Kdh6G0-unsplash.jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/deepanshu-arora-jXzX1Kdh6G0-unsplash.jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<div class="item-body">
+								<h3>Sanchi Stupa </h3>
+								<div class="info">
+									<p><span>Unique in India because of its age and quality, the Buddhist stupas and monasteries at Sanchi...</span>   </p>
+									<h6>Starting From</h6>
+									<p>35 Rs. (Indian Adult)</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									Sanchi Town, Madhya Pradesh
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+			<!-- Rani kamlapati Palace -->
+            <div class="col-md-4 col-sm-6">
+				<div class="service-widget">
+					<div class="property-main">
+						<div class="property-wrap">
+							<figure class="post-media wow fadeIn">
+								<a href="{{ url_for('static', filename='images/bhaumik-shrivastava-T0A4H155SxE-unsplash.jpg') }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="{{ url_for('static', filename='images/bhaumik-shrivastava-T0A4H155SxE-unsplash.jpg') }}" alt="" class="img-responsive">
+								
+								
+							</figure>
+							<div class="item-body">
+								<h3>Rani kamlapati Palace</h3>
+								<div class="info">
+									<p><span>Rani Kamlapati Palace is the commemoration of the glorious past of Bhopal.
+										 The residence of Rani </p>
+									<h6>Starting From</h6>
+									<p>20 Rs.</p>
+								</div>
+								<div class="adderess">
+									<i class="fa fa-map-pin" aria-hidden="true"></i> 
+									Bhopal, Madhya Pradesh
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end service -->
+			</div>
+		</div><!-- end row -->
+	</div><!-- end container -->
+</div><!-- end section -->
+
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="{{ url_for('static', filename='images/logoNew.png') }}" alt="error">
+                        </div>
+                        <p> “TicketUs” An e-ticket is a paperless electronic document used for ticketing. </p>
+                        <p>It can help in better crowd management of museums/heritage/Wild Life Sanctuary sites all over India.</p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                
+				
+				<div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">TicketUs.com</a></li>
+                            <li><a href="#">ggct.in</a></li>
+                            <li>Gyan Ganga College Of Technology</li>
+                            <li>+91 XXXXXXXXXX</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i>
+    <!-- ALL JS FILES -->
+    <script src="{{ url_for('static', filename='js/all.js') }}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hoverdir.js') }}"></script>    
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+   <!-- MAP & CONTACT -->
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+
+</body>
+
+</html>

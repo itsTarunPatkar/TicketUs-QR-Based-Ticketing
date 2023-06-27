@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Download</title>
+    <style>
+        .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ticket-img {
+    width: 25%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ticket-name,
+.ticket-email {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ticket-email {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.ticket-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    display: block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #0b7dda;
+}
+
+    </style>
+
+    <!-- Common CSS FILES  -->
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- fevicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logoNew.png') }}" type="image/x-icon" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+</head>
+<body>
+
+    <!-- Header Starts -->
+
+    <header>
+        <!-- header inner -->
+        <div class="header pt-0 mb-0" >
+    
+          <div class="container pt-0">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+                <div class="full">
+                  <div class="center-desk">
+                    <a href="/">
+                      <div class="d-flex align-item-center">
+                        <img width="75" src="{{ url_for('static', filename='images/logoNew.png') }}" alt="#">
+                      </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <div class="location_icon_bottum_tt">
+                  <ul>
+                    <!-- <li><img src="icon/loc1.png" />Location</li> -->
+                    <li><img src="{{ url_for('static', filename='icon/email1.png') }}" />ticket.us@gmail.com</li>
+                    <li><img src="{{ url_for('static', filename='icon/call1.png') }}" />(+91)XXXXXXXXXX</li>
+                    {% if session['user'] %}
+                    <span class="h6 text-white-50">Welcome</span> <span
+                      class="text-white h4 mr-3">{{session['user'].split()[0]}}</span>
+                    <a href="/logout">
+                      <button type="button" class="btn btn-success">Logout</button>
+                    </a>
+                    {% else %}
+                    <a href="#register" class="ml-5 pl-5">
+                      <button type="button" class="btn btn-success">Register</button>
+                    </a>
+                    <a href="/login">
+                      <button type="button" class="btn btn-success">Login</button>
+                    </a>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 location_icon_bottum">
+                <div class="row">
+                  <div class="col-md-8 ">
+                    <div class="menu-area">
+                      <div class="limit-box">
+                        <nav class="main-menu">
+                          <ul class="menu-area-main">
+                            <li class="active"> <a href="index.html">Home</a> </li>
+                            <li> <a href="">About</a> </li>
+                            <li><a href="#placesToExplore">Places To Explore</a></li>
+                            <li><a href="#testimonial">Testimonial</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+    
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+    
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <form class="search">
+                      <input class="form-control mb-1" type="text" placeholder="Search">
+                      <button><img src="{{ url_for('static', filename='images/search_icon.png') }}"></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end header inner -->
+      </header>
+
+      <!-- Header Ends -->
+    <div class="container ">
+        <img  src="{{url_for('static', filename='images/qr.png')}}" alt="Ticket image" class="ticket-img">
+        <h1 class="ticket-name">Here is Your Ticket : {{user.name}}</h1>
+      
+        <p class="ticket-description">Thank you for trying TicketUs for your ticket needs. We hope you had a smooth and hassle-free experience in booking your ticket with us. As a token of our gratitude, we would like to offer you the option to download your ticket using the button provided below.
+
+            We hope you found our platform easy to navigate and user-friendly. At TicketUs, we are committed to providing excellent service and we would appreciate it if you could take a few moments to give us your feedback in the section provided below.
+            
+            We value your opinion and are constantly striving to improve our platform and services to better serve our customers. We look forward to serving you again and hope to exceed your expectations in the future.
+            
+            Thank you once again for choosing TicketUs. We appreciate your business and look forward to serving you again.</p>
+        <a href="{{url_for('static', filename='images/qr.png')}}" download class="download-btn">Download Now</a>
+    </div>
+</body>
+</html>
