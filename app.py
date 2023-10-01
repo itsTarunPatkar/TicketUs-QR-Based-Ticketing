@@ -246,5 +246,6 @@ def wildLifeCateg():
         ])
   
 if __name__ == "__main__":
-  app.run("localhost", 3300, debug=True)
+  app.run(host="0.0.0.0", debug=False)
+#   app.run("localhost", 3300, debug=True)
     
